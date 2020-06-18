@@ -2,7 +2,7 @@
 
 This repository is an unofficial pytorch implementation of 
 [Convolutional CRFs for Semantic Segmentation](https://arxiv.org/abs/1805.04777).
-We refer to [the official code](https://github.com/MarvinTeichmann/ConvCRF) for our version, the difference between us is
+We refer to [the official code](https://github.com/MarvinTeichmann/ConvCRF) for our version, the differences between us is
 - We rebuild the core code and add enough comments to make it easier to understand
 - We add training code [will come soon]
 - We build ConvCRF3D to process 3D images (includes CT images)
