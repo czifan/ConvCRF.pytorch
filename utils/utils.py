@@ -6,11 +6,25 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+import os
+import torch
+import shutil
 import skimage
 import skimage.transform
 import numpy as np
 import matplotlib.pyplot as plt
 from utils.pascal_visualizer import PascalVisualizer
+
+def dice_coef_theoretical(outputs, targets):
+    if not isinstance(outputs, np.ndarray):
+        outputs = outputs.detach().cpu().numpy()
+    if not isinstance(targets, np.ndarray):
+        targets = targets.detach().cpu().numpy()
+    outputs = (outputs >= 0.5).astype(np.float)
+    targets = (targets >= 1).astype(np.float)
+    inter = (outputs * targets).sum()
+    dice = 2. * inter * 1.0 / (outputs.sum() + targets.sum() + 1e-20) * 1.0
+    return dice
 
 def process_img_unary(img, unary):
     img = img.transpose(2, 0, 1)[np.newaxis, ...]
@@ -75,3 +89,8 @@ def augment_label(label, num_classes, scale=8, keep_prop=0.8):
     noised_label = mask_up * onehot + (1 - mask_up) * noise_up
 
     return noised_label
+
+def save_checkpoint(states, save_file, is_best):
+    torch.save(states, save_file)
+    if is_best:
+        shutil.copy(save_file, os.path.join(*save_file.split('/')[:-1], 'best.pth.tar'))
