@@ -141,7 +141,7 @@ valid_batch_size = 2 * train_batch_size
 lr = 1e-3
 epochs = 20
 display = 10
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = torch.device('cuda:3' if torch.cuda.is_available() else 'cpu')
 if torch.cuda.is_available():
     num_workers = 4
 else:

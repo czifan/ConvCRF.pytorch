@@ -9,7 +9,7 @@ from __future__ import print_function
 import math
 import torch
 import torch.nn as nn
-
+import torch.nn.functional as F
 
 def conv3x3(in_channels, out_channels, stride=1, padding=1, activate='relu'):
     layers = []

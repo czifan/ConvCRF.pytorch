@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5159a050-b4a6-4811-8bc3-d6b42a7c6ca7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/networks/diceloss.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/networks/unet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_crf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_seg.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_crf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train_seg.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networks/convcrf_ori.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/metrics.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/networks/unet.py" beforeDir="false" afterPath="$PROJECT_DIR$/networks/unet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_seg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_crf.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_crf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_seg.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_seg.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
